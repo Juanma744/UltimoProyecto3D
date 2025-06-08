@@ -17,7 +17,12 @@ public class PlayerHealth : MonoBehaviour
 
     private float lastDamageTime;
     private LowHealthController lowHealthController;
+    
+    // En PlayerHealth.cs
     private bool isDead = false;
+    public bool IsDead => isDead;
+
+
 
     void Start()
     {
@@ -69,10 +74,15 @@ public class PlayerHealth : MonoBehaviour
         if (deathScreen != null)
             deathScreen.SetActive(true);
 
-        // Opcional: desactivar controles del jugador
+        // Desactivar movimiento
         var movement = GetComponent<FirstPersonMovement>();
         if (movement != null)
             movement.enabled = false;
+
+        // Desactivar control de cámara
+        var look = GetComponentInChildren<FirstPersonLook>();
+        if (look != null)
+            look.enabled = false;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

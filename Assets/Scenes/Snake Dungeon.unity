@@ -1765,7 +1765,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: efb8c901d051c1e479112203c33cf5df, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1705654408
 Transform:
@@ -1919,9 +1919,9 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1671393940}
   - {fileID: 961739753}
   - {fileID: 1705654408}
   - {fileID: 1398113867}
   - {fileID: 203844589}
-  - {fileID: 1671393940}
   - {fileID: 1692607282}
